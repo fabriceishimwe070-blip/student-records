@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Records</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h2>Student registry</h2>
+    <h4>Manage and track academic records</h4>
+    <button onclick="add()" class="add">+add new student</button>
+    <br>
+    <div style="overflow: hidden;">
+        <table>
+            <thead>
+                <tr class="tr">
+                    <th>Name</th>
+                    <th>Class</th>
+                    <th>Combination</th>
+                </tr>
+            </thead>
+            <tbody id="student"></tbody>
+        </table>
+    </div>
+
+    <div id="log">
+        <div class="input">
+            <h4>full name</h4>
+            <input type="text" id="name" placeholder="Name">
+            <h4>class</h4>
+            <input type="text" id="classe" placeholder="Class">
+            <h4>combination</h4>
+            <input type="text" id="combination" placeholder="Combination">
+        </div>
+        <div class="button">
+            <button onclick="save()" class="save">Save record</button>
+            <button onclick="cancel()" class="can">Cancel</button>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
