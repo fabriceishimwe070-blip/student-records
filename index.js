@@ -1,12 +1,18 @@
 const log = document.getElementById("log");
 
 function add() {
-    log.style.display = "block";
+    const log = document.getElementById("log"); 
+    
+        log.style.display = "block";
+    
+
+   
+    document.getElementById("up").style.display = "none";
 }
 
 function cancel() {
     log.style.display = "none";
-    clearInputs();
+    document.getElementById("up").style.display="block"
 }
 
 function save() {

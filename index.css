@@ -4,7 +4,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 40px;
+    padding: 100px;
     overflow: hidden;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -27,12 +27,8 @@ input{
     position: absolute;
     height: 300px;
     width: 400px;
-    background-color: rgba(222, 216, 216, 0.8);
+    background-color: rgba(222, 216, 216);
     color: black;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     border-radius:20px ;
   padding-bottom: 15px;
   padding-top: 15px;
@@ -85,6 +81,12 @@ td{
     height: 30px;
     width: 150px;
     border-radius: 5px;
+}
+#up{
+    margin-top: 50px;
+}
+.sad{
+    margin-left: 400px;
 }
 button{
     border: 2px solid transparent;
