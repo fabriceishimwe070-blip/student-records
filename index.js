@@ -1,7 +1,7 @@
 const log = document.getElementById("log");
 
 function add() {
-    log.style.visibility = "visible";
+    log.style.display = "block";
 }
 
 function cancel() {
@@ -27,6 +27,5 @@ function save() {
      document.getElementById("name").value = "";
     document.getElementById("classe").value = "";
     document.getElementById("combination").value = "";
-
 }
 

@@ -18,7 +18,7 @@ input{
 }
 #log{
     margin-top: 200px;
-    visibility: hidden;
+    display: none;
     position: absolute;
     height: 300px;
     width: 400px;
