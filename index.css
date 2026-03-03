@@ -7,10 +7,12 @@ body{
     padding: 100px;
     overflow: hidden;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
 }
 input{
-   width: 320px; 
-   height: 20px;
+    font-size: large;
+   width: 380px; 
+   height: 30px;
    outline: none;
    border-radius: 20px;
    border: 3px solid transparent;
@@ -22,41 +24,54 @@ input{
      margin-left: 40px;
 }
 #log{
+    border: 5px solid transparent;
     margin-top: 200px;
     display: none;
     position: absolute;
-    height: 300px;
-    width: 400px;
+    height: 400px;
+    width: 500px;
     background-color: rgba(222, 216, 216);
     color: black;
     border-radius:20px ;
   padding-bottom: 15px;
   padding-top: 15px;
   gap: 20px;
+  background: linear-gradient(white,white)padding-box,
+  linear-gradient(90deg ,red,indigo,violet)
+  ;
+  animation: move 0.5s linear infinite;
+  margin-top: 100px;
 }
 table{
     width: 900px;
+    border-radius: 20px;
+    overflow: hidden;
 }
 .tr{
     background-color: green;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     padding: 20px;
-    border-radius: 20px 20px 0 0;
+    border-radius: 10px;
 }
 tr{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 350px;
-    border: 2px solid black;
+    height: 50px;
+}
+tr:hover{
+    background-color: white;
+}
+.tr:hover{
+    background-color: green;
 }
 td{
     display: flex;
     justify-content: center;
     align-items: center;
     margin-left: -40px;
-    border-right: 2px solid black;
 }
 .button{
     margin-left: 30px;
@@ -102,5 +117,9 @@ button{
         filter: hue-rotate(360deg);
     }
 }
+tbody{
+    background-color: rgb(161, 156, 159);
+}
+
 
 
