@@ -1,47 +1,72 @@
 const log = document.getElementById("log");
 
-function add() {
-    const log = document.getElementById("log"); 
-    
-        log.style.display = "block";
-    
+let student = JSON.parse(localStorage.getItem("stadent")) || [];
 
-   
-    document.getElementById("he").style.filter =" blur(3px)"
+function add() {
+    log.style.display = "block";
+    document.getElementById("he").style.filter = "blur(3px)";
 }
 
 function cancel() {
     log.style.display = "none";
-    document.getElementById("up").style.display="block"
-      document.getElementById("he").style.filter =" blur(0)"
+    document.getElementById("up").style.display = "block";
+    document.getElementById("he").style.filter = "blur(0)";
 }
 
 function save() {
     const name = document.getElementById("name").value;
     const classer = document.getElementById("classe").value;
     const combination = document.getElementById("combination").value;
+
     const table = document.getElementById("student");
-    const row = document.createElement("tr");
-  document.getElementById("he").style.filter =" blur(0)"
-    row.innerHTML = `
-        <td>${name}</td>
-        <td>${classer}</td>
-        <td>${combination}</td>
-    `;
-  log.style.display = "none";
-    table.appendChild(row);
-    
-     document.getElementById("name").value = "";
+
+    document.getElementById("he").style.filter = "blur(0)";
+    log.style.display = "none";
+    const students = {
+        names: name,
+        clas: classer,
+        combo: combination
+    };
+
+    if (students.names && students.clas && students.combo) {
+        student.push(students);
+
+        
+        localStorage.setItem("stadent", JSON.stringify(student));
+    }
+
+    render();
+
+    document.getElementById("name").value = "";
     document.getElementById("classe").value = "";
     document.getElementById("combination").value = "";
-    document.getElementById("table").style.cssText=`
-    border: 4px solid transparent;
-    background: linear-gradient(white,white)padding-box,
-    linear-gradient(90deg,red,green,pink)border-box;
-    animation: move 2s linear infinite;
-    `
-    document.getElementById("bad").style.cssText=`
-      border-radius: 10px 10px 0 0;
-    `
 }
 
+function render() {
+ document.getElementById("table").style.cssText=`
+     border: 3px solid transparent;
+    background: linear-gradient(white,white)padding-box,
+    linear-gradient(90deg,violet,red,blue)border-box;
+    animation: move 2s linear infinite;
+    `
+
+    const table = document.getElementById("student");
+
+   
+    table.innerHTML = "";
+
+   
+    student.forEach(item => {
+
+        const row = table.insertRow();
+
+        row.innerHTML = `
+            <td>${item.names}</td>
+            <td>${item.clas}</td>
+            <td>${item.combo}</td>
+        `;
+    });
+}
+
+
+render();
